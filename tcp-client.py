@@ -1,5 +1,4 @@
 import socket
-import select
 
 HOST = "task.miminet.ru"
 PORT = 8010
@@ -19,7 +18,7 @@ try:
 
     png_data = all_data[::-1]
 
-    with open("received_image.png", "wb") as f:
+    with open("image/received_image.png", "wb") as f:
         f.write(png_data)
 
     print(png_data)
